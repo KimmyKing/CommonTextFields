@@ -1,0 +1,506 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A44DA7CF1FC2D9A4006AE85F /* BaseTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A44DA7CB1FC2D9A4006AE85F /* BaseTextField.m */; };
+		A44DA7D01FC2D9A4006AE85F /* MoneyTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A44DA7CC1FC2D9A4006AE85F /* MoneyTextField.m */; };
+		A44DA7D11FC2D9A4006AE85F /* BaseTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = A44DA7CD1FC2D9A4006AE85F /* BaseTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A44DA7D21FC2D9A4006AE85F /* MoneyTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = A44DA7CE1FC2D9A4006AE85F /* MoneyTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A44DA7D41FC2DB55006AE85F /* CustomTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = A44DA7D31FC2DB55006AE85F /* CustomTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A44DA7DD1FC2DC88006AE85F /* PhoneTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A44DA7D91FC2DC88006AE85F /* PhoneTextField.m */; };
+		A44DA7DE1FC2DC88006AE85F /* PhoneTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = A44DA7DA1FC2DC88006AE85F /* PhoneTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A44DA7DF1FC2DC88006AE85F /* VecodeTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A44DA7DB1FC2DC88006AE85F /* VecodeTextField.m */; };
+		A44DA7E01FC2DC88006AE85F /* VecodeTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = A44DA7DC1FC2DC88006AE85F /* VecodeTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A44DAA4F1FC50A3F006AE85F /* BaseTextFieldDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = A44DAA4E1FC50A3F006AE85F /* BaseTextFieldDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A44DAA981FC518C7006AE85F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A44DAA971FC518C7006AE85F /* AppDelegate.m */; };
+		A44DAA9B1FC518C7006AE85F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A44DAA9A1FC518C7006AE85F /* ViewController.m */; };
+		A44DAA9E1FC518C7006AE85F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A44DAA9C1FC518C7006AE85F /* Main.storyboard */; };
+		A44DAAA01FC518C7006AE85F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A44DAA9F1FC518C7006AE85F /* Assets.xcassets */; };
+		A44DAAA31FC518C7006AE85F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A44DAAA11FC518C7006AE85F /* LaunchScreen.storyboard */; };
+		A44DAAA61FC518C7006AE85F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A44DAAA51FC518C7006AE85F /* main.m */; };
+		A44DAAAB1FC51A46006AE85F /* CustomTextField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A44DA7C01FC2D979006AE85F /* CustomTextField.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A44DA7C01FC2D979006AE85F /* CustomTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CustomTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A44DA7C41FC2D979006AE85F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A44DA7CB1FC2D9A4006AE85F /* BaseTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTextField.m; sourceTree = "<group>"; };
+		A44DA7CC1FC2D9A4006AE85F /* MoneyTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoneyTextField.m; sourceTree = "<group>"; };
+		A44DA7CD1FC2D9A4006AE85F /* BaseTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTextField.h; sourceTree = "<group>"; };
+		A44DA7CE1FC2D9A4006AE85F /* MoneyTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoneyTextField.h; sourceTree = "<group>"; };
+		A44DA7D31FC2DB55006AE85F /* CustomTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTextField.h; sourceTree = "<group>"; };
+		A44DA7D91FC2DC88006AE85F /* PhoneTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneTextField.m; sourceTree = "<group>"; };
+		A44DA7DA1FC2DC88006AE85F /* PhoneTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneTextField.h; sourceTree = "<group>"; };
+		A44DA7DB1FC2DC88006AE85F /* VecodeTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VecodeTextField.m; sourceTree = "<group>"; };
+		A44DA7DC1FC2DC88006AE85F /* VecodeTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VecodeTextField.h; sourceTree = "<group>"; };
+		A44DAA4E1FC50A3F006AE85F /* BaseTextFieldDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTextFieldDelegate.h; sourceTree = "<group>"; };
+		A44DAA941FC518C7006AE85F /* Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A44DAA961FC518C7006AE85F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A44DAA971FC518C7006AE85F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A44DAA991FC518C7006AE85F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A44DAA9A1FC518C7006AE85F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A44DAA9D1FC518C7006AE85F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A44DAA9F1FC518C7006AE85F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A44DAAA21FC518C7006AE85F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A44DAAA41FC518C7006AE85F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A44DAAA51FC518C7006AE85F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A44DA7BC1FC2D979006AE85F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A44DAA911FC518C7006AE85F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A44DAAAB1FC51A46006AE85F /* CustomTextField.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A44DA7B61FC2D979006AE85F = {
+			isa = PBXGroup;
+			children = (
+				A44DA7C21FC2D979006AE85F /* CustomTextField */,
+				A44DAA951FC518C7006AE85F /* Test */,
+				A44DA7C11FC2D979006AE85F /* Products */,
+				A44DAAAA1FC51A46006AE85F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A44DA7C11FC2D979006AE85F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A44DA7C01FC2D979006AE85F /* CustomTextField.framework */,
+				A44DAA941FC518C7006AE85F /* Test.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A44DA7C21FC2D979006AE85F /* CustomTextField */ = {
+			isa = PBXGroup;
+			children = (
+				A44DA7D31FC2DB55006AE85F /* CustomTextField.h */,
+				A44DA7CD1FC2D9A4006AE85F /* BaseTextField.h */,
+				A44DA7CB1FC2D9A4006AE85F /* BaseTextField.m */,
+				A44DAA4E1FC50A3F006AE85F /* BaseTextFieldDelegate.h */,
+				A44DA7CE1FC2D9A4006AE85F /* MoneyTextField.h */,
+				A44DA7CC1FC2D9A4006AE85F /* MoneyTextField.m */,
+				A44DA7DA1FC2DC88006AE85F /* PhoneTextField.h */,
+				A44DA7D91FC2DC88006AE85F /* PhoneTextField.m */,
+				A44DA7DC1FC2DC88006AE85F /* VecodeTextField.h */,
+				A44DA7DB1FC2DC88006AE85F /* VecodeTextField.m */,
+				A44DA7C41FC2D979006AE85F /* Info.plist */,
+			);
+			path = CustomTextField;
+			sourceTree = "<group>";
+		};
+		A44DAA951FC518C7006AE85F /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				A44DAA961FC518C7006AE85F /* AppDelegate.h */,
+				A44DAA971FC518C7006AE85F /* AppDelegate.m */,
+				A44DAA991FC518C7006AE85F /* ViewController.h */,
+				A44DAA9A1FC518C7006AE85F /* ViewController.m */,
+				A44DAA9C1FC518C7006AE85F /* Main.storyboard */,
+				A44DAA9F1FC518C7006AE85F /* Assets.xcassets */,
+				A44DAAA11FC518C7006AE85F /* LaunchScreen.storyboard */,
+				A44DAAA41FC518C7006AE85F /* Info.plist */,
+				A44DAAA51FC518C7006AE85F /* main.m */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		A44DAAAA1FC51A46006AE85F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		A44DA7BD1FC2D979006AE85F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A44DAA4F1FC50A3F006AE85F /* BaseTextFieldDelegate.h in Headers */,
+				A44DA7E01FC2DC88006AE85F /* VecodeTextField.h in Headers */,
+				A44DA7D11FC2D9A4006AE85F /* BaseTextField.h in Headers */,
+				A44DA7DE1FC2DC88006AE85F /* PhoneTextField.h in Headers */,
+				A44DA7D41FC2DB55006AE85F /* CustomTextField.h in Headers */,
+				A44DA7D21FC2D9A4006AE85F /* MoneyTextField.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		A44DA7BF1FC2D979006AE85F /* CustomTextField */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A44DA7C81FC2D979006AE85F /* Build configuration list for PBXNativeTarget "CustomTextField" */;
+			buildPhases = (
+				A44DA7BB1FC2D979006AE85F /* Sources */,
+				A44DA7BC1FC2D979006AE85F /* Frameworks */,
+				A44DA7BD1FC2D979006AE85F /* Headers */,
+				A44DA7BE1FC2D979006AE85F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CustomTextField;
+			productName = CustomTextField;
+			productReference = A44DA7C01FC2D979006AE85F /* CustomTextField.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A44DAA931FC518C7006AE85F /* Test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A44DAAA71FC518C7006AE85F /* Build configuration list for PBXNativeTarget "Test" */;
+			buildPhases = (
+				A44DAA901FC518C7006AE85F /* Sources */,
+				A44DAA911FC518C7006AE85F /* Frameworks */,
+				A44DAA921FC518C7006AE85F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Test;
+			productName = Test;
+			productReference = A44DAA941FC518C7006AE85F /* Test.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A44DA7B71FC2D979006AE85F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = Goldian;
+				TargetAttributes = {
+					A44DA7BF1FC2D979006AE85F = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					A44DAA931FC518C7006AE85F = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = A44DA7BA1FC2D979006AE85F /* Build configuration list for PBXProject "CustomTextField" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A44DA7B61FC2D979006AE85F;
+			productRefGroup = A44DA7C11FC2D979006AE85F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A44DA7BF1FC2D979006AE85F /* CustomTextField */,
+				A44DAA931FC518C7006AE85F /* Test */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A44DA7BE1FC2D979006AE85F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A44DAA921FC518C7006AE85F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A44DAAA31FC518C7006AE85F /* LaunchScreen.storyboard in Resources */,
+				A44DAAA01FC518C7006AE85F /* Assets.xcassets in Resources */,
+				A44DAA9E1FC518C7006AE85F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A44DA7BB1FC2D979006AE85F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A44DA7DF1FC2DC88006AE85F /* VecodeTextField.m in Sources */,
+				A44DA7D01FC2D9A4006AE85F /* MoneyTextField.m in Sources */,
+				A44DA7DD1FC2DC88006AE85F /* PhoneTextField.m in Sources */,
+				A44DA7CF1FC2D9A4006AE85F /* BaseTextField.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A44DAA901FC518C7006AE85F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A44DAA9B1FC518C7006AE85F /* ViewController.m in Sources */,
+				A44DAAA61FC518C7006AE85F /* main.m in Sources */,
+				A44DAA981FC518C7006AE85F /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A44DAA9C1FC518C7006AE85F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A44DAA9D1FC518C7006AE85F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A44DAAA11FC518C7006AE85F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A44DAAA21FC518C7006AE85F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A44DA7C61FC2D979006AE85F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = iphoneos;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A44DA7C71FC2D979006AE85F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A44DA7C91FC2D979006AE85F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 9RAUNQ6K9F;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = CustomTextField/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				OTHER_CFLAGS = "-fembed-bitcode";
+				PRODUCT_BUNDLE_IDENTIFIER = Goldian.CustomTextField;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A44DA7CA1FC2D979006AE85F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 9RAUNQ6K9F;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = CustomTextField/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				OTHER_CFLAGS = "-fembed-bitcode";
+				PRODUCT_BUNDLE_IDENTIFIER = Goldian.CustomTextField;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A44DAAA81FC518C7006AE85F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9RAUNQ6K9F;
+				INFOPLIST_FILE = Test/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = Goldian.Test;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A44DAAA91FC518C7006AE85F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9RAUNQ6K9F;
+				INFOPLIST_FILE = Test/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Goldian.Test;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A44DA7BA1FC2D979006AE85F /* Build configuration list for PBXProject "CustomTextField" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A44DA7C61FC2D979006AE85F /* Debug */,
+				A44DA7C71FC2D979006AE85F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A44DA7C81FC2D979006AE85F /* Build configuration list for PBXNativeTarget "CustomTextField" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A44DA7C91FC2D979006AE85F /* Debug */,
+				A44DA7CA1FC2D979006AE85F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A44DAAA71FC518C7006AE85F /* Build configuration list for PBXNativeTarget "Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A44DAAA81FC518C7006AE85F /* Debug */,
+				A44DAAA91FC518C7006AE85F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A44DA7B71FC2D979006AE85F /* Project object */;
+}
