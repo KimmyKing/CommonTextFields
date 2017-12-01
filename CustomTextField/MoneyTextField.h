@@ -6,6 +6,10 @@
 //  Copyright © 2017年 Goldian. All rights reserved.
 //
 
+/*
+ !!!: 检验输入的金额是否合法 
+ */
+
 #import "BaseTextField.h"
 
 @interface MoneyTextField : BaseTextField

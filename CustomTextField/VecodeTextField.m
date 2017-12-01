@@ -10,6 +10,9 @@
 
 @interface VecodeTextField ()
 
+//重获验证码按钮
+@property (nonatomic , strong)UIButton *button;
+
 @property (nonatomic , strong)NSTimer *timer;
 
 @property (nonatomic , assign)int second;
@@ -20,10 +23,11 @@
 
 - (void)prepareTextFieldWithDefaultSetting
 {
+    [super prepareTextFieldWithDefaultSetting];
+    self.keyboardType = UIKeyboardTypeNumberPad;
     self.rightViewMode = UITextFieldViewModeAlways;
     
-    //重获验证码按钮
-    _button = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 100, 30)];
+    _button = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 100, 20)];
     _button.backgroundColor = [UIColor whiteColor];
     _button.titleLabel.font = [UIFont systemFontOfSize:12];
     _button.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight;
@@ -34,14 +38,14 @@
 }
 
 //MARK: -
-//MARK: -- 点击按钮
+//MARK: -- 点击获取验证码按钮
 - (void)clickButton:(UIButton *)sender
 {
     sender.enabled = NO;
     _second = 60;
     
-    if ([_vecodeDelegate respondsToSelector:@selector(clickButtonWithTextField:startTimer:executeButton:)]) {
-        [_vecodeDelegate clickButtonWithTextField:self startTimer:@selector(startTimer) executeButton:@selector(executeButton)];
+    if ([_vecodeDelegate respondsToSelector:@selector(clickButtonWithTextField:startTimer:reenableButton:)]) {
+        [_vecodeDelegate clickButtonWithTextField:self startTimer:@selector(startTimer) reenableButton:@selector(reenableButton)];
     }
 }
 
@@ -50,9 +54,9 @@
     _timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(countdown) userInfo:nil repeats:YES];
 }
 
-- (void)executeButton
+- (void)reenableButton
 {
-    _button.enabled = YES;
+    [self resetTextField];
 }
 
 - (void)countdown
@@ -61,11 +65,16 @@
     [self.button setTitle:[NSString stringWithFormat:@"%d",_second] forState:UIControlStateNormal];
     
     if (_second < 0) {
-        [_button setTitle:@"重获验证码" forState:UIControlStateNormal];
-        [_timer invalidate];
-        _second = 60;
-        _button.enabled = YES;
+        [self resetTextField];
     }
+}
+
+- (void)resetTextField
+{
+    [_button setTitle:@"重获验证码" forState:UIControlStateNormal];
+    [_timer invalidate];
+    _second = 60;
+    _button.enabled = YES;
 }
 
 @end

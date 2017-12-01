@@ -16,7 +16,9 @@
 
 - (void)prepareTextFieldWithDefaultSetting
 {
+    [super prepareTextFieldWithDefaultSetting];
     self.delegate = self;
+    self.keyboardType = UIKeyboardTypeDecimalPad;
 }
 
 //MARK: -

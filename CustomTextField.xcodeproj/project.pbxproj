@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A41D7BDD1FD1312B009BE932 /* BaseTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A44DA7CB1FC2D9A4006AE85F /* BaseTextField.m */; };
+		A41D7BDE1FD1312F009BE932 /* MoneyTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A44DA7CC1FC2D9A4006AE85F /* MoneyTextField.m */; };
+		A41D7BDF1FD13132009BE932 /* PhoneTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A44DA7D91FC2DC88006AE85F /* PhoneTextField.m */; };
+		A41D7BE01FD13135009BE932 /* VecodeTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A44DA7DB1FC2DC88006AE85F /* VecodeTextField.m */; };
 		A44DA7CF1FC2D9A4006AE85F /* BaseTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A44DA7CB1FC2D9A4006AE85F /* BaseTextField.m */; };
 		A44DA7D01FC2D9A4006AE85F /* MoneyTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A44DA7CC1FC2D9A4006AE85F /* MoneyTextField.m */; };
 		A44DA7D11FC2D9A4006AE85F /* BaseTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = A44DA7CD1FC2D9A4006AE85F /* BaseTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -258,9 +262,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A41D7BDF1FD13132009BE932 /* PhoneTextField.m in Sources */,
 				A44DAA9B1FC518C7006AE85F /* ViewController.m in Sources */,
 				A44DAAA61FC518C7006AE85F /* main.m in Sources */,
+				A41D7BE01FD13135009BE932 /* VecodeTextField.m in Sources */,
+				A41D7BDE1FD1312F009BE932 /* MoneyTextField.m in Sources */,
 				A44DAA981FC518C7006AE85F /* AppDelegate.m in Sources */,
+				A41D7BDD1FD1312B009BE932 /* BaseTextField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

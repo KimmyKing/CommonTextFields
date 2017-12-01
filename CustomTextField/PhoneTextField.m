@@ -20,6 +20,7 @@
 
 - (void)prepareTextFieldWithDefaultSetting
 {
+    [super prepareTextFieldWithDefaultSetting];
     self.keyboardType = UIKeyboardTypeNumberPad;
     self.delegate = self;
     [self addTarget:self action:@selector(actionEditingChanged:) forControlEvents:UIControlEventEditingChanged];
@@ -34,6 +35,7 @@
     
     NSString *onlyNumberString = [self getOnlyNumberStringFromString:textField.text position:&currentPosition];
     
+    //限制字数
     if (onlyNumberString.length > 11) {
         textField.text = _lastText;
         textField.selectedTextRange = _currentTextRange;
