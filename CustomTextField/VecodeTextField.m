@@ -21,20 +21,41 @@
 
 @implementation VecodeTextField
 
+- (instancetype)initWithFrame:(CGRect)frame rightView:(UIView *)rightView
+{
+    if (self = [super initWithFrame:frame]) {
+        
+        self.keyboardType = UIKeyboardTypeNumberPad;
+        self.rightView = rightView;
+        [self findButtonWithView:rightView];
+        
+    }
+    return self;
+}
+
 - (void)prepareTextFieldWithDefaultSetting
 {
     [super prepareTextFieldWithDefaultSetting];
-    self.keyboardType = UIKeyboardTypeNumberPad;
-    self.rightViewMode = UITextFieldViewModeAlways;
     
-    _button = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 100, 20)];
-    _button.backgroundColor = [UIColor whiteColor];
-    _button.titleLabel.font = [UIFont systemFontOfSize:12];
-    _button.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight;
-    [_button setTitle:@"获取验证码" forState:UIControlStateNormal];
-    [_button setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
-    [_button addTarget:self action:@selector(clickButton:) forControlEvents:UIControlEventTouchUpInside];
-    self.rightView = _button;
+    [self findButtonWithView:self.rightView];
+}
+
+- (void)setRightView:(UIView *)rightView
+{
+    [super setRightView:rightView];
+    self.rightViewMode = UITextFieldViewModeAlways;
+    [self findButtonWithView:rightView];
+}
+
+- (void)findButtonWithView:(UIView *)view
+{
+    [view.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if ([obj isKindOfClass:UIButton.class]) {
+            self.button = obj;
+            [self.button addTarget:self action:@selector(clickButton:) forControlEvents:UIControlEventTouchUpInside];
+            *stop = YES;
+        }
+    }];
 }
 
 //MARK: -
@@ -62,7 +83,10 @@
 - (void)countdown
 {
     _second--;
-    [self.button setTitle:[NSString stringWithFormat:@"%d",_second] forState:UIControlStateNormal];
+    
+    if ([self.vecodeDelegate respondsToSelector:@selector(vecodeTextField:isCountDown:button:)]) {
+        [self.vecodeDelegate vecodeTextField:self isCountDown:_second button:self.button];
+    }
     
     if (_second < 0) {
         [self resetTextField];

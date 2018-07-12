@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "CustomTextField.h"
 
-@interface ViewController ()<VecodeTFDelegate>
+@interface ViewController ()<VecodeTextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet BaseTextField *baseTF;
 
@@ -21,6 +21,8 @@
 
 @property (nonatomic , assign)SEL reenableButton;
 
+@property (nonatomic , strong)VecodeTextField *vecodeTextField;
+
 @end
 
 @implementation ViewController
@@ -28,7 +30,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    UIView *rightView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 14)];
+    UIView *line = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 1, 21)];
+    line.backgroundColor = UIColor.redColor;
+    [rightView addSubview:line];
+    
+    UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(10, 0, 80, 14)];
+    [btn setTitle:@"获取验证码" forState:UIControlStateNormal];
+    [btn setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
+    btn.titleLabel.font = [UIFont systemFontOfSize:14];
+    [rightView addSubview:btn];
+    
+    self.vecodeTF.rightView = rightView;
     self.vecodeTF.vecodeDelegate = self;
+    
+    [self.view addSubview:self.vecodeTextField];
     
 }
 
@@ -65,7 +81,38 @@
     if ([self.vecodeTF respondsToSelector:self.reenableButton]) {
         [self.vecodeTF performSelector:self.reenableButton];
     }
+    
+    if ([self.vecodeTextField respondsToSelector:self.reenableButton]) {
+        [self.vecodeTextField performSelector:self.reenableButton];
+    }
 }
 #pragma clang diagnostic pop
+
+- (void)vecodeTextField:(VecodeTextField *)textField isCountDown:(int)second button:(UIButton *)button
+{
+    [button setTitle:[NSString stringWithFormat:@"重新获取%ds", second] forState:UIControlStateNormal];
+}
+
+- (VecodeTextField *)vecodeTextField
+{
+    if (!_vecodeTextField) {
+        
+        UIView *rightView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 14)];
+        UIView *line = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 1, 21)];
+        line.backgroundColor = UIColor.redColor;
+        [rightView addSubview:line];
+        
+        UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(10, 0, 80, 14)];
+        [btn setTitle:@"获取验证码" forState:UIControlStateNormal];
+        [btn setTitleColor:UIColor.greenColor forState:UIControlStateNormal];
+        btn.titleLabel.font = [UIFont systemFontOfSize:14];
+        [rightView addSubview:btn];
+        
+        _vecodeTextField = [[VecodeTextField alloc] initWithFrame:CGRectMake(0, 500, 375, 30) rightView:rightView];
+        _vecodeTextField.placeholder = @"通过代码加载的vecodeTextField";
+        _vecodeTextField.vecodeDelegate = self;
+    }
+    return _vecodeTextField;
+}
 
 @end

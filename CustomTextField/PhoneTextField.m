@@ -131,8 +131,6 @@
 //MARK: --检测手机号码是否正确
 - (BOOL)isCorrectPhoneNumber
 {
-    [self resignFirstResponder];
-    
     //正则表达式(匹配手机号3-4-4格式)
     NSString *pattren = @"^1[3578]+\\d-\\d{4}-\\d{4}";
     //SELF MATCHES:匹配正则表达式
