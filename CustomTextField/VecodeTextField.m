@@ -24,27 +24,21 @@
 - (instancetype)initWithFrame:(CGRect)frame rightView:(UIView *)rightView
 {
     if (self = [super initWithFrame:frame]) {
-        
-        self.keyboardType = UIKeyboardTypeNumberPad;
         self.rightView = rightView;
-        [self findButtonWithView:rightView];
-        
     }
     return self;
 }
 
 - (void)prepareTextFieldWithDefaultSetting
 {
-    [super prepareTextFieldWithDefaultSetting];
-    
-    [self findButtonWithView:self.rightView];
+    self.keyboardType = UIKeyboardTypeNumberPad;
+    self.rightViewMode = UITextFieldViewModeAlways;
 }
 
 - (void)setRightView:(UIView *)rightView
 {
     [super setRightView:rightView];
-    self.rightViewMode = UITextFieldViewModeAlways;
-    [self findButtonWithView:rightView];
+    [self findButtonWithView:self.rightView];
 }
 
 - (void)findButtonWithView:(UIView *)view
@@ -62,11 +56,10 @@
 //MARK: -- 点击获取验证码按钮
 - (void)clickButton:(UIButton *)sender
 {
-    sender.enabled = NO;
     _second = 60;
     
-    if ([_vecodeDelegate respondsToSelector:@selector(clickButtonWithTextField:startTimer:reenableButton:)]) {
-        [_vecodeDelegate clickButtonWithTextField:self startTimer:@selector(startTimer) reenableButton:@selector(reenableButton)];
+    if ([_vecodeDelegate respondsToSelector:@selector(clickButtonWithTextField:button:startTimer:reenableButton:)]) {
+        [_vecodeDelegate clickButtonWithTextField:self button:sender startTimer:@selector(startTimer) reenableButton:@selector(reenableButton)];
     }
 }
 

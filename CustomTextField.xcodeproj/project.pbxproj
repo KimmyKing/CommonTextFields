@@ -97,9 +97,9 @@
 			isa = PBXGroup;
 			children = (
 				A44DA7D31FC2DB55006AE85F /* CustomTextField.h */,
+				A44DAA4E1FC50A3F006AE85F /* BaseTextFieldDelegate.h */,
 				A44DA7CD1FC2D9A4006AE85F /* BaseTextField.h */,
 				A44DA7CB1FC2D9A4006AE85F /* BaseTextField.m */,
-				A44DAA4E1FC50A3F006AE85F /* BaseTextFieldDelegate.h */,
 				A44DA7CE1FC2D9A4006AE85F /* MoneyTextField.h */,
 				A44DA7CC1FC2D9A4006AE85F /* MoneyTextField.m */,
 				A44DA7DA1FC2DC88006AE85F /* PhoneTextField.h */,
@@ -141,12 +141,12 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A44DAA4F1FC50A3F006AE85F /* BaseTextFieldDelegate.h in Headers */,
 				A44DA7E01FC2DC88006AE85F /* VecodeTextField.h in Headers */,
 				A44DA7D11FC2D9A4006AE85F /* BaseTextField.h in Headers */,
 				A44DA7DE1FC2DC88006AE85F /* PhoneTextField.h in Headers */,
 				A44DA7D41FC2DB55006AE85F /* CustomTextField.h in Headers */,
 				A44DA7D21FC2D9A4006AE85F /* MoneyTextField.h in Headers */,
+				A44DAA4F1FC50A3F006AE85F /* BaseTextFieldDelegate.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

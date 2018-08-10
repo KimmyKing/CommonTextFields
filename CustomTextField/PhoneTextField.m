@@ -20,7 +20,6 @@
 
 - (void)prepareTextFieldWithDefaultSetting
 {
-    [super prepareTextFieldWithDefaultSetting];
     self.keyboardType = UIKeyboardTypeNumberPad;
     self.delegate = self;
     [self addTarget:self action:@selector(actionEditingChanged:) forControlEvents:UIControlEventEditingChanged];
@@ -132,11 +131,12 @@
 - (BOOL)isCorrectPhoneNumber
 {
     //正则表达式(匹配手机号3-4-4格式)
-    NSString *pattren = @"^1[3578]+\\d-\\d{4}-\\d{4}";
+    NSString *pattren = @"^1[3578]+\\d\\d{4}\\d{4}$";
     //SELF MATCHES:匹配正则表达式
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",pattren];
     //评估输入的手机号是否匹配
-    return [predicate evaluateWithObject:self.text];
+    NSString *mobile = [self.text stringByReplacingOccurrencesOfString:@"-" withString:@""];
+    return [predicate evaluateWithObject:mobile];
 }
 
 @end

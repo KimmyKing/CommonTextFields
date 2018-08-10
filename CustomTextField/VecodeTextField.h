@@ -12,14 +12,16 @@
 
 @protocol VecodeTextFieldDelegate <NSObject>
 
+
 /**
  点击重获验证码按钮
 
  @param textField 当前的文本输入框
+ @param button 点击的按钮
  @param startTimer 提供外部的方法:开始计时器
- @param reenableButton 提供外部的方法,解禁按钮
+ @param reenableButto 提供外部的方法,解禁按钮
  */
-- (void)clickButtonWithTextField:(VecodeTextField *)textField startTimer:(SEL)startTimer reenableButton:(SEL)reenableButton;
+- (void)clickButtonWithTextField:(VecodeTextField *)textField button:(UIButton *)button startTimer:(SEL)startTimer reenableButton:(SEL)reenableButto;
 
 /**
  正在倒计时

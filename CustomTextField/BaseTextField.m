@@ -7,8 +7,29 @@
 //
 
 #import "BaseTextField.h"
+#import "MoneyTextField.h"
+#import "PhoneTextField.h"
+#import "VecodeTextField.h"
 
 @implementation BaseTextField
+
++ (instancetype)textFieldWithType:(BaseTextFieldType)textFieldType
+{
+    BaseTextField *textField;
+    switch (textFieldType) {
+        case BaseTextFieldTypeMoney:
+            textField = [[MoneyTextField alloc] init];
+            break;
+        case BaseTextFieldTypePhone:
+            textField = [[PhoneTextField alloc] init];
+            break;
+        case BaseTextFieldTypeVecode:
+            textField = [[VecodeTextField alloc] init];
+            break;
+    }
+    [textField prepareTextFieldWithDefaultSetting];
+    return textField;
+}
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
@@ -24,25 +45,9 @@
     [self prepareTextFieldWithDefaultSetting];
 }
 
-- (instancetype)initWithFrame:(CGRect)frame placeholder:(NSString *)placeholder borderColor:(UIColor *)color target:(id)target selector:(SEL)selector
-{
-    if (self = [super initWithFrame:frame]) {
-        self.placeholder = placeholder;
-        self.layer.borderColor = color.CGColor;
-        self.layer.borderWidth = 1;
-        self.layer.cornerRadius = 5;
-        self.clipsToBounds = YES;
-        [self addTarget:target action:selector forControlEvents:UIControlEventEditingChanged];
-        [self prepareTextFieldWithDefaultSetting];
-    }
-    return self;
-}
-
 - (void)prepareTextFieldWithDefaultSetting
 {
-    UIView *leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 10, 0)];
-    self.leftView = leftView;
-    self.leftViewMode = UITextFieldViewModeAlways;
+    
 }
 
 @end

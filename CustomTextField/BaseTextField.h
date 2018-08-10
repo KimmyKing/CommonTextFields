@@ -6,26 +6,23 @@
 //  Copyright © 2017年 Goldian. All rights reserved.
 //
 
-
-/*
- !!!: 开始编辑的位置自带空格 
- */
 #import <UIKit/UIKit.h>
 #import "BaseTextFieldDelegate.h"
 
+typedef enum : NSUInteger {
+    BaseTextFieldTypeMoney,
+    BaseTextFieldTypePhone,
+    BaseTextFieldTypeVecode,
+} BaseTextFieldType;
+
 @interface BaseTextField : UITextField <BaseTextFieldDelegate>
 
-
 /**
- 构造方法
+  类族模式的构造方法
 
- @param frame 位置
- @param placeholder 占位字符
- @param color 边框色
- @param target <#target description#>
- @param selector 编辑时接受消息的函数名
- @return <#return value description#>
+ @param textFieldType 输入框类型
+ @return 对应的输入框
  */
-- (instancetype)initWithFrame:(CGRect)frame placeholder:(NSString *)placeholder borderColor:(UIColor *)color target:(id)target selector:(SEL)selector;
++ (instancetype)textFieldWithType:(BaseTextFieldType)textFieldType;
 
 @end
