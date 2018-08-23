@@ -131,7 +131,7 @@
 - (BOOL)isCorrectPhoneNumber
 {
     //正则表达式(匹配手机号3-4-4格式)
-    NSString *pattren = @"^1[3578]+\\d\\d{4}\\d{4}$";
+    NSString *pattren = @"^1[3578]+\\d{9}$";
     //SELF MATCHES:匹配正则表达式
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",pattren];
     //评估输入的手机号是否匹配

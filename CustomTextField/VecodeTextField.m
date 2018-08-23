@@ -8,6 +8,12 @@
 
 #import "VecodeTextField.h"
 
+//缓存代理响应方法的结构体
+struct{
+    BOOL clickVecodeButton;
+    BOOL isCountDown;
+} vecodeDelegateCache;
+
 @interface VecodeTextField ()
 
 //重获验证码按钮
@@ -15,16 +21,19 @@
 
 @property (nonatomic , strong)NSTimer *timer;
 
-@property (nonatomic , assign)int second;
+@property (nonatomic, assign)int currentSecond;
 
 @end
 
 @implementation VecodeTextField
 
-- (instancetype)initWithFrame:(CGRect)frame rightView:(UIView *)rightView
+- (instancetype)initWithFrame:(CGRect)frame rightView:(UIView *)rightView second:(int)second
 {
     if (self = [super initWithFrame:frame]) {
         self.rightView = rightView;
+        self.maxSecond = second;
+        self.currentSecond = second;
+        [self findButtonWithView:self.rightView];
     }
     return self;
 }
@@ -35,10 +44,26 @@
     self.rightViewMode = UITextFieldViewModeAlways;
 }
 
+- (void)setMaxSecond:(int)maxSecond
+{
+    _maxSecond = maxSecond;
+    self.currentSecond = maxSecond;
+    [self findButtonWithView:self.rightView];
+}
+
 - (void)setRightView:(UIView *)rightView
 {
     [super setRightView:rightView];
     [self findButtonWithView:self.rightView];
+}
+
+//MARK: -
+//MARK: -- 只需要判断一次是否响应代理方法(将结果缓存)
+- (void)setVecodeDelegate:(id<VecodeTextFieldDelegate>)vecodeDelegate
+{
+    _vecodeDelegate = vecodeDelegate;
+    vecodeDelegateCache.clickVecodeButton = [vecodeDelegate respondsToSelector:@selector(clickButtonWithTextField:button:)];
+    vecodeDelegateCache.isCountDown = [vecodeDelegate respondsToSelector:@selector(vecodeTextField:isCountDown:button:)];
 }
 
 - (void)findButtonWithView:(UIView *)view
@@ -56,42 +81,49 @@
 //MARK: -- 点击获取验证码按钮
 - (void)clickButton:(UIButton *)sender
 {
-    _second = 60;
-    
-    if ([_vecodeDelegate respondsToSelector:@selector(clickButtonWithTextField:button:startTimer:reenableButton:)]) {
-        [_vecodeDelegate clickButtonWithTextField:self button:sender startTimer:@selector(startTimer) reenableButton:@selector(reenableButton)];
+    if (vecodeDelegateCache.clickVecodeButton) {
+        [_vecodeDelegate clickButtonWithTextField:self button:sender];
     }
 }
 
 - (void)startTimer
 {
-    _timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(countdown) userInfo:nil repeats:YES];
-}
-
-- (void)reenableButton
-{
-    [self resetTextField];
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(countdown) userInfo:nil repeats:YES];
+    [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
 }
 
 - (void)countdown
 {
-    _second--;
-    
-    if ([self.vecodeDelegate respondsToSelector:@selector(vecodeTextField:isCountDown:button:)]) {
-        [self.vecodeDelegate vecodeTextField:self isCountDown:_second button:self.button];
+    self.currentSecond--;
+    if (vecodeDelegateCache.isCountDown) {
+        [self.vecodeDelegate vecodeTextField:self isCountDown:self.currentSecond button:self.button];
     }
-    
-    if (_second < 0) {
-        [self resetTextField];
+    if (self.currentSecond < 0) {
+        [self reset];
     }
 }
 
-- (void)resetTextField
+- (void)reset
 {
-    [_button setTitle:@"重获验证码" forState:UIControlStateNormal];
-    [_timer invalidate];
-    _second = 60;
-    _button.enabled = YES;
+    [self.button setTitle:@"重获验证码" forState:UIControlStateNormal];
+    [self.timer invalidate];
+    self.timer = nil;
+    self.currentSecond = self.maxSecond;
+    self.button.enabled = YES;
+}
+
+//MARK: -
+//MARK: -- 防止循环引用
+- (void)removeFromSuperview
+{
+    [self reset];
+}
+
+- (void)dealloc
+{
+#ifdef DEBUG
+    NSLog(@"%s", __func__);
+#endif
 }
 
 @end

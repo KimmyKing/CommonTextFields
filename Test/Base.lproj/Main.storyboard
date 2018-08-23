@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JKe-i0-hA0">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -46,17 +46,24 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qgo-HA-Y4Z">
-                                <rect key="frame" x="267" y="527" width="108" height="30"/>
-                                <state key="normal" title="重新开始计时器"/>
+                                <rect key="frame" x="298" y="527" width="77" height="30"/>
+                                <state key="normal" title="重置计时器"/>
                                 <connections>
                                     <action selector="stopTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="coi-x1-Lpe"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cix-Zy-laG">
-                                <rect key="frame" x="0.0" y="527" width="77" height="30"/>
-                                <state key="normal" title="开启计时器"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dkn-VT-Lze">
+                                <rect key="frame" x="0.0" y="527" width="138" height="30"/>
+                                <state key="normal" title="检测手机号是否正确"/>
                                 <connections>
-                                    <action selector="startTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ta9-tV-eDP"/>
+                                    <action selector="checkPhoneNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Zs-wN-ZAj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UUi-ha-auR">
+                                <rect key="frame" x="0.0" y="497" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="clickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ahp-a6-lmT"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -64,20 +71,23 @@
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="o36-9d-mFD" secondAttribute="trailing" id="1mO-cT-ZUg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5hk-m4-UXF" secondAttribute="trailing" id="3Nd-9R-rId"/>
-                            <constraint firstItem="5hk-m4-UXF" firstAttribute="top" secondItem="Cix-Zy-laG" secondAttribute="bottom" id="4fI-mE-bg3"/>
+                            <constraint firstItem="Dkn-VT-Lze" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3hU-G6-dEt"/>
                             <constraint firstItem="5hk-m4-UXF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="AuA-iq-AS2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fKd-9V-kwf" secondAttribute="trailing" id="Pff-9H-Yx1"/>
                             <constraint firstItem="fKd-9V-kwf" firstAttribute="top" secondItem="o36-9d-mFD" secondAttribute="bottom" constant="10" id="QaC-a8-xOU"/>
+                            <constraint firstItem="5hk-m4-UXF" firstAttribute="top" secondItem="Dkn-VT-Lze" secondAttribute="bottom" id="SE9-oc-zIO"/>
                             <constraint firstItem="5hk-m4-UXF" firstAttribute="top" secondItem="qgo-HA-Y4Z" secondAttribute="bottom" id="buF-fX-M4x"/>
                             <constraint firstItem="fKd-9V-kwf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eFZ-cz-8Sv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qgo-HA-Y4Z" secondAttribute="trailing" id="ez6-hq-B82"/>
                             <constraint firstItem="o36-9d-mFD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fgx-KF-cao"/>
                             <constraint firstItem="o36-9d-mFD" firstAttribute="top" secondItem="5hk-m4-UXF" secondAttribute="bottom" constant="10" id="jX2-le-G4p"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fKd-9V-kwf" secondAttribute="bottom" id="n7F-I2-7xs"/>
-                            <constraint firstItem="Cix-Zy-laG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qev-kN-Rr6"/>
+                            <constraint firstItem="UUi-ha-auR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="p9P-hS-jEh"/>
+                            <constraint firstItem="Dkn-VT-Lze" firstAttribute="top" secondItem="UUi-ha-auR" secondAttribute="bottom" id="utV-pd-Dio"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="TzC-1w-5O7"/>
                     <connections>
                         <outlet property="moneyTF" destination="fKd-9V-kwf" id="IEF-c0-cVX"/>
                         <outlet property="phoneTF" destination="o36-9d-mFD" id="Mt0-dE-6dh"/>
@@ -86,6 +96,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="798" y="-667"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="EGC-qC-KfI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JKe-i0-hA0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KXV-AS-WfE">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="drm-vQ-b84"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2hW-BA-lJt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-26.399999999999999" y="-667.01649175412297"/>
         </scene>
     </scenes>
 </document>

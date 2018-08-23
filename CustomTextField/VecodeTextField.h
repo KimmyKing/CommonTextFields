@@ -18,10 +18,8 @@
 
  @param textField 当前的文本输入框
  @param button 点击的按钮
- @param startTimer 提供外部的方法:开始计时器
- @param reenableButto 提供外部的方法,解禁按钮
  */
-- (void)clickButtonWithTextField:(VecodeTextField *)textField button:(UIButton *)button startTimer:(SEL)startTimer reenableButton:(SEL)reenableButto;
+- (void)clickButtonWithTextField:(VecodeTextField *)textField button:(UIButton *)button;
 
 /**
  正在倒计时
@@ -38,13 +36,27 @@
 
 @property (nonatomic , weak)id <VecodeTextFieldDelegate>vecodeDelegate;
 
+@property (nonatomic, assign)int maxSecond;
+
 /**
- 构造方法:
+ 开启计时器
+ */
+- (void)startTimer;
+
+
+/**
+ 重置
+ */
+- (void)reset;
+
+/**
+ 全能构造方法
 
  @param frame <#frame description#>
- @param rightView rightView有且只能包含一个button
+  @param rightView rightView有且只能包含一个button
+ @param second 倒计时时间
  @return <#return value description#>
  */
-- (instancetype)initWithFrame:(CGRect)frame rightView:(UIView *)rightView;
+- (instancetype)initWithFrame:(CGRect)frame rightView:(UIView *)rightView second:(int)second;
 
 @end

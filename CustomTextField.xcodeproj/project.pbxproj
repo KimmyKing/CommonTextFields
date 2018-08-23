@@ -28,6 +28,7 @@
 		A44DAAA31FC518C7006AE85F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A44DAAA11FC518C7006AE85F /* LaunchScreen.storyboard */; };
 		A44DAAA61FC518C7006AE85F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A44DAAA51FC518C7006AE85F /* main.m */; };
 		A44DAAAB1FC51A46006AE85F /* CustomTextField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A44DA7C01FC2D979006AE85F /* CustomTextField.framework */; };
+		A4F25DE72122E3D1006BD651 /* NextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F25DE62122E3D1006BD651 /* NextViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,8 @@
 		A44DAAA21FC518C7006AE85F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A44DAAA41FC518C7006AE85F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A44DAAA51FC518C7006AE85F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A4F25DE52122E3D1006BD651 /* NextViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NextViewController.h; sourceTree = "<group>"; };
+		A4F25DE62122E3D1006BD651 /* NextViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NextViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +121,8 @@
 				A44DAA971FC518C7006AE85F /* AppDelegate.m */,
 				A44DAA991FC518C7006AE85F /* ViewController.h */,
 				A44DAA9A1FC518C7006AE85F /* ViewController.m */,
+				A4F25DE52122E3D1006BD651 /* NextViewController.h */,
+				A4F25DE62122E3D1006BD651 /* NextViewController.m */,
 				A44DAA9C1FC518C7006AE85F /* Main.storyboard */,
 				A44DAA9F1FC518C7006AE85F /* Assets.xcassets */,
 				A44DAAA11FC518C7006AE85F /* LaunchScreen.storyboard */,
@@ -267,6 +272,7 @@
 				A44DAAA61FC518C7006AE85F /* main.m in Sources */,
 				A41D7BE01FD13135009BE932 /* VecodeTextField.m in Sources */,
 				A41D7BDE1FD1312F009BE932 /* MoneyTextField.m in Sources */,
+				A4F25DE72122E3D1006BD651 /* NextViewController.m in Sources */,
 				A44DAA981FC518C7006AE85F /* AppDelegate.m in Sources */,
 				A41D7BDD1FD1312B009BE932 /* BaseTextField.m in Sources */,
 			);
